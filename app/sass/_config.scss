@@ -19,6 +19,9 @@ $transition: 0.25s ease-out;
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 30px;
 $gutter: $grid-gutter-width;
+//fontawesome
+$fa-font-path: "../fonts/webfonts";
+
 
 // IMPORT SECTION
 
@@ -26,6 +29,12 @@ $gutter: $grid-gutter-width;
 @import "node_modules/bootstrap/scss/mixins/_breakpoints.scss"; // Bootstrap Breakpoints mixin
 // @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/_utilities.scss'; // Optional Bootstrap Utilities
+
+@import 'node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/regular.scss';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/v4-shims.scss';
 
 
 // FONTS LOAD SECTION
