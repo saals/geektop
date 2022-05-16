@@ -1,5 +1,25 @@
 <header class="header">
-  <!--  -->
-  <i class="fa-brands fa-app-store"></i>
-  <i class="fa-solid fa-arrows-down-to-line"></i>
+  <a href="/" class="logo logo-letter">geektop</a>
+  <nav class="main-nav">
+    <button class="main-nav__burger" type="button"><i class="fa-solid fa-bars"></i></button>
+    <ul class="main-nav__list">
+      <li class="main-nav__item active"><a href="#" class="main-nav__link">электроника</a></li>
+      <li class="main-nav__item"><a href="#" class="main-nav__link">новости it</a></li>
+      <li class="main-nav__item"><a href="#" class="main-nav__link">обзоры</a></li>
+      <li class="main-nav__item"><a href="#" class="main-nav__link">лайфхаки</a></li>
+      <li class="main-nav__item"><a href="#" class="main-nav__link">diy</a></li>
+      <li class="main-nav__item"><a href="#" class="main-nav__link">о сайте</a></li>
+    </ul>
+  </nav>
+  <div class="search-page" title="Поиск по сайту">
+    <button class="search-page__icon" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <div class="search-page__field">
+      <form action="/search.html" id="cse-search-box">
+        <input type="hidden" name="cx" value="partner-pub-xxx:xxx"/>
+        <input type="hidden" name="cof" value="FORID:10"/>
+        <input type="hidden" name="ie" value="UTF-8"/>
+        <input type="text" name="q" placeholder="Поиск по сайту..."/>
+      </form>
+    </div>
+  </div>
 </header>

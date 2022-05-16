@@ -4,6 +4,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // Custom JS
-  $('.header').hide();
+  // $('.header').hide();
 
 });
