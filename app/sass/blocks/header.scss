@@ -24,6 +24,12 @@
   }
 }
 
+.logo-letter {
+  span {
+    color: $accent;
+  }
+}
+
 .main-nav {
   height: 100%;
 }
@@ -31,6 +37,7 @@
 .main-nav__burger{
   display: none;
   height: 100%;
+  margin-right: 85px;
   padding: 0 12px;
   background-color: transparent;
   border: none;
@@ -43,7 +50,7 @@
     background-color: lighten($black, 18%);
   }
 
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(md){
     display: block;
   }
 }
@@ -54,10 +61,10 @@
   padding: 0;
   list-style: none;
 
-  @include media-breakpoint-down(sm){
-    //display: none;
+  @include media-breakpoint-down(md){
+    display: none;
     flex-direction: column;
-    background-color: $black;
+    background-color: rgba($black, .5);
     position: absolute;
     left: 0;
     width: 100%;
@@ -67,6 +74,7 @@
 
 .main-nav__item {
   padding: 0 25px;
+  transition: background-color $transition;
 
   &.active {
     background-color: lighten($black, 12%);
@@ -75,6 +83,14 @@
     a {
       color: lighten(#d1d9e0, 6%);
     }
+  }
+
+  &:hover{
+    background-color: lighten($black, 8%);
+  }
+
+  @include media-breakpoint-down(lg){
+    padding: 0 12px;
   }
 }
 
@@ -91,10 +107,14 @@
   transition: color $transition;
 
   &:hover {
-    color: $accent;
+    color: lighten(#d1d9e0, 3%);
   }
 
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(lg){
+    font-size: 15px;
+  }
+
+  @include media-breakpoint-down(md){
     line-height: 50px;
   }
 }
@@ -112,11 +132,10 @@
 
 .search-page__field {
   display: none;
-
   width: 100%;
-  padding: 25px 6%;
-  background: lighten($dark, 10%);
-  box-shadow: inset 0 1px 3px lighten($black, 70%);
+  padding: 15px 6%;
+  background: lighten($dark, 3%);
+  border-top: 1px solid lighten($black, 5%);
   position: absolute;
   top: 65px;
   left: 0;
@@ -125,13 +144,20 @@
   input[type="text"] {
     width: 100%;
     padding: 8px 16px;
-    color: #000;
-    //background-color: lighten($dark, 10%);
-    border: none;
-    border-radius: 4px;
+    font-size: 16px;
+    color: $white;
+    border: 1px solid lighten($dark, 10%);
+    background-color: lighten($dark, 7%);
+    outline: none;
+
+    &:focus{
+      border-color: lighten($dark, 15%);
+    }
 
     &::placeholder{
+      color: rgba($white, 0.3);
       font-family: Arial, sans-serif;
+      font-style: italic;
     }
   }
 }
