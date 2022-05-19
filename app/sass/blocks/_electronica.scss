@@ -3,7 +3,8 @@
   background: #fafafa;
 
   @include media-breakpoint-down(md) {
-    padding-top: $gutter/2;
+    padding-top: calc(#{$gutter} / 2);
+    //padding-bottom: calc(#{$gutter} / 2);
   }
 }
 
@@ -11,11 +12,11 @@
   max-width: 968px;
   margin: 0 auto $gutter;
 
-  img {
+  /*img {
     display: block;
     max-width: 100%;
     height: auto;
-  }
+  }*/
 }
 
 .electronica__post {
