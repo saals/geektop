@@ -1,6 +1,9 @@
 // // Import vendor jQuery plugin example
 // import '~/app/libs/mmenu/dist/mmenu.js'
 
+// import '../libs/likely/dist/likely.js';
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
   $('.logo-letter').each(function () {
@@ -32,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   $('.main-nav__burger').click(function () {
     $('.main-nav--mobile').stop().slideToggle();
   });
+
 
 //
   /*
