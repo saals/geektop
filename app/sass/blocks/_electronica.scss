@@ -1,0 +1,26 @@
+.electronica {
+  padding: $gutter 0;
+  background: #fafafa;
+
+  @include media-breakpoint-down(md) {
+    padding-top: $gutter/2;
+  }
+}
+
+.electronica__ad {
+  max-width: 968px;
+  margin: 0 auto $gutter;
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.electronica__post {
+
+  &.post {
+    min-height: 350px;
+  }
+}

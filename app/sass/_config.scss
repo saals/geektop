@@ -17,7 +17,7 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Fon
 $transition: 0.25s ease-out;
 
 // Bootstrap compatible gutter variable => $gutter
-$grid-gutter-width: 30px;
+$grid-gutter-width: 20px;
 $gutter: $grid-gutter-width;
 //fontawesome
 $fa-font-path: "../fonts/webfonts";
@@ -27,14 +27,17 @@ $fa-font-path: "../fonts/webfonts";
 
 @import "node_modules/bootstrap/scss/bootstrap-reboot.scss"; // Bootstrap Reboot collection
 @import "node_modules/bootstrap/scss/mixins/_breakpoints.scss"; // Bootstrap Breakpoints mixin
-//@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
-// @import 'node_modules/bootstrap/scss/_utilities.scss'; // Optional Bootstrap Utilities
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
+@import 'node_modules/bootstrap/scss/_utilities.scss'; // Optional Bootstrap Utilities
+
 
 @import 'node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import 'node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
 @import 'node_modules/@fortawesome/fontawesome-free/scss/regular.scss';
 @import 'node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
 @import 'node_modules/@fortawesome/fontawesome-free/scss/v4-shims.scss';
+
+//@import "../libs/likely/dist/likely.scss";
 
 
 // FONTS LOAD SECTION
@@ -86,7 +89,40 @@ body {
   font-size: $fontsize;
   line-height: $lineheight;
   color: $textcolor;
-  min-width: 320px;
+  min-width: 300px;
   position: relative;
   overflow-x: hidden;
+}
+
+/*img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}*/
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+
+//COMMON
+
+.likely {
+  .likely__widget{
+    font-size: 12px;
+  }
+
+  svg {
+    //left: 3px;
+    //top: 3px;
+    width: 14px;
+    height: 14px;
+  }
 }
