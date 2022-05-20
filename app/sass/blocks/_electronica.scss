@@ -24,4 +24,11 @@
   &.post {
     min-height: 350px;
   }
+
+  .post__comments {
+
+    &::before {
+      display: none;
+    }
+  }
 }
