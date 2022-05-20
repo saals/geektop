@@ -74,14 +74,18 @@
   margin: 0;
   font-size: 14px;
 
-  &::after {
+  &::after,
+  &::before {
     content: "";
-    display: inline-block;
     width: 6px;
     height: 6px;
     margin: 0 5px 3px;
     border-radius: 50%;
     background-color: darken($white, 30%);
+  }
+
+  &::after {
+    display: inline-block;
   }
 
   a {
@@ -106,4 +110,5 @@
   font-weight: 700;
   font-family: baron-gt, sans-serif;
 }
+
 

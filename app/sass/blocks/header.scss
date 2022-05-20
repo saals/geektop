@@ -173,7 +173,9 @@
       display: flex;
       flex-direction: column;
       background-color: rgba($black, .5);
-      position: absolute;
+      //position: relative;
+      /*position: absolute;
+      z-index: 3;*/
       left: 0;
       width: 100%;
       text-align: center;
