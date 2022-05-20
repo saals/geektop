@@ -1,0 +1,75 @@
+.diy{
+  padding: $gutter*2 0;
+  background-color: #fafafa;
+}
+
+.diy__post-one{
+  &.post {
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      opacity: 0.9;
+
+      .post__title{
+        a {
+          text-decoration: underline;
+          color: $accent;
+        }
+      }
+    }
+
+    .post__content {
+      position: static;
+      width: 100%;
+      padding-top: $gutter;
+
+      @include media-breakpoint-down(lg) {
+        padding-left: $gutter;
+        padding-right: $gutter;
+        padding-bottom: $gutter;
+        border-bottom: 1px solid lighten($dark, 30%);
+      }
+    }
+
+    .post__comments {
+      color: darken($white, 30%);
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .post__title {
+      margin: 10px 0 0;
+      font-size: 23px;
+      line-height: 1.2;
+      color: $textcolor;
+    }
+
+    .post__data {
+      color: darken($white, 30%);
+    }
+  }
+}
+
+.diy__post-two {
+  margin-bottom: $gutter*0.5;
+  &.post {
+    min-height: 230px;
+  }
+
+  .post__comments {
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .post__data {
+    color: $white;
+  }
+}
