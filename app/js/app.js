@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //
   $('.header').after('<div class="main-nav--mobile"></div>');
-  $('.main-nav__list').clone().appendTo('.main-nav--mobile');
+  $('.header .main-nav__list').clone().appendTo('.main-nav--mobile');
   $('.main-nav__burger').click(function () {
     $('.main-nav--mobile').stop().slideToggle();
   });

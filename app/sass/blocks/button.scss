@@ -1,10 +1,27 @@
 .button {
 	display: inline-block;
-	padding: 8px 12px;
+	padding: 12px 24px;
+	width: 185px;
 
-	background: transparent;
+	background-color: $accent;
 	border: none;
+	border-radius: 10em;
 
+	color: inherit;
+	font-weight: 700;
+	font-size: 14px;
 	text-transform: uppercase;
 	text-decoration: none;
+	text-align: center;
+
+	transition: background-color $transition;
+
+	&:hover {
+		color: inherit;
+		background-color: lighten($accent, 7%);
+	}
+
+	&:active {
+		background-color: darken($accent, 7%);
+	}
 }
