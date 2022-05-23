@@ -1,0 +1,42 @@
+.cat-heading {
+  background-size: cover;
+  background-position: center top;
+}
+
+.cat-heading__post {
+  min-height: 370px;
+  display: flex;
+
+  &.post {
+    &::before{
+      top: 10px;
+      right: 10px;
+      bottom: 10px;
+      left: 10px;
+      border-color: $white;
+    }
+    &::after {
+      background-color: rgba($dark, 0.75);
+    }
+  }
+
+  .post__content {
+    position: static;
+    margin: auto;
+    padding: 20px;
+    width: 75%;
+
+    @include media-breakpoint-down(sm){
+      width: 90%;
+      padding: 10px;
+    }
+  }
+
+  .post__title {
+    margin-bottom: 20px;
+    font-size: 34px;
+    line-height: 1.2;
+    font-family: baron-gt, sans-serif;
+    text-transform: none;
+  }
+}
