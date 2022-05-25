@@ -1,0 +1,127 @@
+.cat-reviews {
+  padding-top: $gutter*2;
+  background-color: $white;
+
+  ul {
+    list-style: none;
+
+    li:not(:last-child) {
+      margin-bottom: $gutter;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: $gutter*0.5;
+      }
+    }
+  }
+
+  .pagination {
+    position: relative;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -50vw;
+      right: -50vw;
+      background-color: #f5f5f5;
+    }
+
+    .pagination__list,
+    .button--pag {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.cat-reviews__post {
+  display: flex;
+  text-decoration: none;
+
+  @include media-breakpoint-down(md) {
+    flex-wrap: wrap;
+  }
+
+  img {
+    width: 360px;
+    min-width: 360px;
+    height: 222px;
+    object-fit: cover;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+
+  &.post {
+    &::before,
+    &::after {
+      //display: none;
+      right: auto;
+      width: 360px;
+      height: 222px;
+
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+    }
+
+    &::after {
+      background-color: transparent;
+    }
+
+    &:hover::after {
+      background-color: rgba($dark, 0.45);
+    }
+
+    &::before {
+      border: 0 solid rgba($white, 0);
+    }
+
+    &:hover::before {
+      top: 0;
+      right: auto;
+      bottom: 0;
+      left: 0;
+      border: 10px solid rgba($white, 0.3);
+
+    }
+
+    &:hover {
+      //opacity: 1;
+      .post__title {
+        color: $accent;
+      }
+    }
+
+    .post__content {
+      position: static;
+      padding-left: 20px;
+
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        padding-left: 10px;
+        margin-top: 10px;
+        border-bottom: 1px solid lighten($black, 70%);
+      }
+    }
+
+    .post__title {
+      font-size: 22px;
+      line-height: 1.2;
+      text-transform: none;
+      color: $textcolor;
+      transition: color $transition;
+
+    }
+
+    .post__desc {
+      font-size: 15px;
+      line-height: 24px;
+      color: $textcolor;
+      margin-bottom: 8px;
+    }
+  }
+}

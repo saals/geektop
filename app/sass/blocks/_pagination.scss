@@ -1,0 +1,45 @@
+.pagination {
+  padding: $gutter*2 0;
+  text-align: center;
+}
+
+.pagination__list {
+  margin: 20px 0 0;
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.pagination__item {
+  display: inline-block;
+  width: 47px;
+  height: 47px;
+  border: 2px solid #d8d8d8;
+  border-radius: 50%;
+  background-color: $white;
+  text-decoration: none;
+  line-height: 43px;
+  color: #888888;
+
+  &:hover {
+    color: $accent;
+  }
+
+  &.active {
+    color: $accent;
+    border-color: $accent;
+  }
+}
+
+.pagination__arrow {
+  padding: 0 8px;
+  text-decoration: none;
+  color: #aaaaaa;
+
+  &:hover {
+    color: $accent;
+  }
+
+  &.active {
+    color: $accent;
+  }
+}

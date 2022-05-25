@@ -17,7 +17,6 @@
 
   &::after {
     background-color: rgba($dark, 0.45);
-
   }
 
   &:hover::after {
@@ -106,6 +105,12 @@
   line-height: 20px;
   font-weight: 700;
   font-family: baron-gt, sans-serif;
+}
+
+.post__desc {
+  font-size: 17px;
+  line-height: 23px;
+  font-weight: 500;
 }
 
 
