@@ -1,0 +1,15 @@
+.all-posts {
+  .cat-reviews {
+    padding-top: $gutter;
+
+    h2.visually-hidden {
+      clip: auto;
+      height: auto;
+      margin: 0 0 10px;
+      position: static;
+      width: auto;
+      text-transform: uppercase;
+      font-size: 24px;
+    }
+  }
+}
