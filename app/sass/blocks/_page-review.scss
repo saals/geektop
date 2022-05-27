@@ -1,0 +1,71 @@
+.page-review {
+  padding: $gutter*2 0;
+
+  .article {
+    p {
+      margin: 25px 0;
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: auto;
+    }
+
+    h2, h3, h4, h5, h6 {
+      line-height: 1.2;
+    }
+
+    blockquote {
+      padding: $gutter;
+      margin: $gutter*2 $gutter*2.5;
+      font-size: 20px;
+      color: #000000;
+      border-top: $accent 2px solid;
+      border-bottom: $accent 2px solid;
+    }
+
+    ul, ol {
+      padding-left: $gutter;
+
+      li {
+        margin: 10px 0;
+      }
+    }
+
+    .video {
+      margin: $gutter 0;
+    }
+  }
+
+  @include media-breakpoint-up(sm){
+    .likely {
+      .likely__widget {
+        font-size: 16px;
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 15px;
+    height: 0;
+
+    iframe {
+      border: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
