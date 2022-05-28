@@ -2,6 +2,7 @@
 // import '~/app/libs/mmenu/dist/mmenu.js'
 
 // import '../libs/likely/dist/likely.js';
+import '../libs/prognroll/dist/prognroll.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -61,5 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
   blockClickDrop('.search-page__icon', '.search-page__field', '.search-page')
   blockClickDrop('.main-nav__burger', '.main-nav--mobile', '.main-nav')
   */
+
+  $("body").prognroll({
+    height: 3,
+    color: "#ec1c1c",
+    custom: false
+  });
 });
 
